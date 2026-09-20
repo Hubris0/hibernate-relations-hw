@@ -1,12 +1,12 @@
 package mate.academy.hibernate.relations.service.impl;
 
+import static mate.academy.hibernate.relations.util.HibernateUtil.getSessionFactory;
+
 import mate.academy.hibernate.relations.dao.MovieDao;
 import mate.academy.hibernate.relations.dao.impl.MovieDaoImpl;
 import mate.academy.hibernate.relations.exception.DataProcessingException;
 import mate.academy.hibernate.relations.model.Movie;
 import mate.academy.hibernate.relations.service.MovieService;
-
-import static mate.academy.hibernate.relations.util.HibernateUtil.getSessionFactory;
 
 public class MovieServiceImpl implements MovieService {
     private static final MovieDao movieDao = new MovieDaoImpl(getSessionFactory());
